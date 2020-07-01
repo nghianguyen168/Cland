@@ -1,18 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-
     pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/templates/tags/taglib.jsp" %>
-<c:set var="contextPath" value="${pageContext.request.contextPath }/admin/cat" />
+<c:set var="contextPath" value="${pageContext.request.contextPath }/admin/contact" />
   			<div class="content-box-large">
   				<div class="row">
 	  				<div class="panel-heading">
-	  					<div class="panel-title ">Quản lý danh mục</div>
+	  					<div class="panel-title ">Quản lý liên hệ</div>
 		  			</div>
 				</div>
 				<hr>	
 				<div class="row">
 					<div class="col-md-8">
-						<a href="${contextPath }/add" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Thêm</a>
+						<a href="add.html" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Thêm</a>
 
 					</div>
                 	<div class="col-md-4">
@@ -24,42 +23,45 @@
                   	 </div>
                   	</div>
 				</div>
-				<br />
-				<c:if test="${not empty msg }">
-					<div class="alert alert-success" role="alert">
-					  ${msg }
-					</div>
-				</c:if>
-				
+
 				<div class="row">
   				<div class="panel-body">
+  				<c:if test="${not empty msg}">
+  				<div class="alert alert-success" role="alert">
+					  ${msg }
+					</div>
+  				</c:if>
   					<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
 						<thead>
 							<tr>
 								<th>ID</th>
-								<th>Tên Danh Mục</th>
-								<th>Chức Năng</th>
+								<th>Fullname</th>
+								<th>Email</th>
+								<th>Subject</th>
+								<th>Content</th>
+								<th>Chức năng</th>
 							</tr>
 						</thead>
 						<tbody>
-							<c:if test="${catList ne null }">
-							<c:forEach items="${catList }" var="cat">
-							
-							<c:set var="urlEdit" value="${contextPath }/edit/${cat.cid }" />
-							<c:set var="urlDel" value="${contextPath }/del/${cat.cid }" />
-							<tr class="odd gradeX">
-								<td>${cat.cid }</td>
-								<td>${cat.cname }</td>
-								<td class="center text-center">
-									<a href="${urlEdit}" title="Sửa" class="btn btn-primary"><span class="glyphicon glyphicon-pencil "></span> Sửa</a>
-                                    <a onclick="return confirm('Bạn có chắc chắn muốn xóa?');" href="${urlDel}" title="Xóa" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Xóa</a>
-								</td>
-							</tr>
-							</c:forEach>
-							</c:if>
+						<c:if test="${contactList ne null }">
+							<c:forEach items="${contactList }" var="contact">
+							<c:set var="urlDel" value="${contextPath }/del/${contact.cid }" />
+								<tr class="odd gradeX">
+									<td>${contact.cid }</td>
+									<td>${contact.fullname }</td>
+									<td>${contact.email }</td>
+									<td>${contact.subject }</td>
+									<td>${contact.content }</td>
+									
+									<td class="center text-center">
+	                                    <a onclick="return confirm('Bạn có chắc chắn muốn xóa?');" href="${urlDel}" title="" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Xóa</a>
+									</td>
+								</tr>
+						</c:forEach>
+						</c:if>
 						</tbody>
 					</table>
-					
+
 					<!-- Pagination -->
 					<nav class="text-center" aria-label="...">
 					   <ul class="pagination">

@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/main/java/edu/vinaenter/cland/configs/SpringMVCApplication.java=UTF-8
 encoding//src/main/java/edu/vinaenter/cland/controllers/admins/AdminCategoryController.java=UTF-8
+encoding//src/main/java/edu/vinaenter/cland/daos/LandDAO.java=UTF-8
 encoding//src/main/java/edu/vinaenter/cland/models/Categories.java=UTF-8
 encoding//src/main/resources/messages.properties=UTF-8
 encoding//src/main/webapp/WEB-INF/templates/cland/inc/navbar.jsp=UTF-8

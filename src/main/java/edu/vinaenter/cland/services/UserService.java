@@ -1,5 +1,10 @@
 package edu.vinaenter.cland.services;
 
-public interface UserService {
+import java.util.List;
 
+import edu.vinaenter.cland.models.User;
+
+public interface UserService {
+	List<User> findAll();
+	int delItem(int id);
 }

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap Admin Theme v3</title>
+    <title>Cland Admin</title>
     <link rel="shortcut icon" type="image/ico" href="${pageContext.request.contextPath }/resources/admin/images/icon-180x180.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->

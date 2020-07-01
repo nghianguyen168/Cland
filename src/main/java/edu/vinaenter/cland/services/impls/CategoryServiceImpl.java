@@ -24,4 +24,24 @@ public class CategoryServiceImpl  implements CategoryService{
 		return catDAO.addItem(cat);
 	}
 
+	@Override
+	public List<Categories> checkExist(String cname) {
+		return catDAO.checkExist(cname);
+	}
+
+	@Override
+	public Categories findById(int cid) {
+		return catDAO.getById(cid);
+	}
+
+	@Override
+	public int editItem(Categories cat) {
+		return catDAO.editItem(cat);
+	}
+
+	@Override
+	public int delItem(int cid) {
+		return catDAO.delItem(cid);
+	}
+
 }
