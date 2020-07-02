@@ -4,14 +4,16 @@
 	<!-- Nav-bar -->
 	<ul class="nav">
 		<!-- Main menu -->
-		<li class="current"><a href="index.html"><i
+		<li class="current"><a href="${pageContext.request.contextPath }/admin/index""><i
 				class="glyphicon glyphicon-home"></i> Trang chủ</a></li>
-		<li><a href="cat.html"><i class="glyphicon glyphicon-list"></i>
+		<li><a href="${pageContext.request.contextPath }/admin/cat/index"><i class="glyphicon glyphicon-list"></i>
 				Danh mục</a></li>
-		<li><a href="news.html"><i class="glyphicon glyphicon-book"></i>
-				Truyện</a></li>
-		<li><a href="add.html"><i class="glyphicon glyphicon-plus"></i>
-				Thêm</a></li>
+		<li><a href="${pageContext.request.contextPath }/admin/land/index"><i class="glyphicon glyphicon-book"></i>
+				Tin đăng</a></li>
+		<li><a href="${pageContext.request.contextPath }/admin/contact/index"><i class="glyphicon glyphicon-plus"></i>
+				Liên hệ</a></li>
+		<li><a href="${pageContext.request.contextPath }/admin/dùng/index"><i class="glyphicon glyphicon-plus"></i>
+				Người dùng</a></li>	
 		<li class="submenu"><a href="#"> <i
 				class="glyphicon glyphicon-list"></i> Pages <span
 				class="caret pull-right"></span>

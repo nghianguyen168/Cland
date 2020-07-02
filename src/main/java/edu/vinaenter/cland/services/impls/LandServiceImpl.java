@@ -31,6 +31,22 @@ public class LandServiceImpl implements LandService {
 		return landDAO.findByPage(limit, offset);
 	}
 
+	@Override
+	public List<Land> findTrend() {
+		return landDAO.findTrend();
+	}
+
+	@Override
+	public List<Land> findByCat(int cid) {
+		// TODO Auto-generated method stub
+		return landDAO.findByCat(cid);
+	}
+
+	@Override
+	public Land findById(int lid) {
+		return landDAO.findById(lid);
+	}
+
 	
 	
 

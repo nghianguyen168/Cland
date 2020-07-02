@@ -10,7 +10,7 @@ import edu.vinaenter.cland.models.Categories;
 @Repository
 public class CategoryDAO extends AbstractDAO{
 
-	private static final String FIND_ALL ="SELECT cid,cname FROM categories ORDER BY cid DESC";
+	private static final String FIND_ALL ="SELECT categories.*,COUNT(lands.cid) AS count FROM `categories` LEFT JOIN lands ON categories.cid = lands.cid GROUP by categories.cid";
 	private static final String ADD_ITEM ="INSERT INTO categories(cname) values(?)";
 	private static final String FIND_BY_NAME ="SELECT * FROM categories WHERE cname = ?";
 	private static final String FIND_BY_ID = "SELECT * FROM categories WHERE cid = ?";

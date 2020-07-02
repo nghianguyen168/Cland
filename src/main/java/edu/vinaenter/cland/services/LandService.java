@@ -8,5 +8,7 @@ public interface LandService {
 	List<Land> findAll();
 	int totalRow();
 	List<Land> findByPage(int offset,int limit);
-	 
+	List<Land> findTrend();
+	List<Land> findByCat(int cid);
+	Land findById(int lid);
 }
